@@ -1,0 +1,72 @@
+'''
+apple = 49
+man =3
+x=0
+
+while apple>=man:
+    apple=apple - man #apple is 46
+    x+=1
+
+print(f'꺼낸횟수는 {x} 입니다.')
+'''
+'''
+apple = 49
+man =3
+x=0
+
+while apple>=man:
+    apple=apple - man #apple is 46
+
+print(f'사과의 갯수는 {apple} 입니다.')
+
+'''
+BOARD=[ [1,2,6],
+        [8,0,3],
+        [5,7,4]]
+
+#화면에 보드 상태 보여주기
+
+#만약 key값이 d와 같다면
+#BOARD[2][2]와 BOARD[2][1]를 서로 바꾸기
+print(BOARD[0])
+print(BOARD[1])
+print(BOARD[2])
+i=0
+r=1
+c=1
+while i<=100000000:
+    key=input('wasd중에 하나입력')
+
+    if key == 'd':
+        BOARD[r][c+1],BOARD[r][c]=BOARD[r][c],BOARD[r][c+1]
+        r=r
+        c=c+1
+        print(BOARD[0])
+        print(BOARD[1])
+        print(BOARD[2])
+        
+    if key == 'a':
+        BOARD[r][c-1],BOARD[r][c]=BOARD[r][c],BOARD[r][c-1]
+        r=r
+        c=c-1
+        print(BOARD[0])
+        print(BOARD[1])
+        print(BOARD[2])
+
+    if key == 'w':
+        BOARD[r-1][c],BOARD[r][c]=BOARD[r][c],BOARD[r-1][c]
+        r=r-1
+        c=c
+        print(BOARD[0])
+        print(BOARD[1])
+        print(BOARD[2])
+
+    if key == 's':
+        BOARD[r+1][c],BOARD[r][c]=BOARD[r][c],BOARD[r+1][c]
+        r=r+1
+        c=c
+        print(BOARD[0])
+        print(BOARD[1])
+        print(BOARD[2])
+
+
