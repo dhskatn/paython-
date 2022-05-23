@@ -1,0 +1,57 @@
+
+import random
+
+g = ['가위','바위','보']
+
+s=0
+b=0
+c=0
+s1=0
+b1=0
+c1=0
+
+while (s<4):
+    
+    me = str(input('가위, 바위 ,보 중 골라주세요'))
+    com = str(g[random.randint(0,2)])
+    print(f'나는 {me}, 컴퓨터는 {com}을 냈습니다')
+    
+
+    if com == me:
+        print('비겼습니다')
+        b+=1
+        b1+=1
+        print('나의 전적',s,b,c,'컴퓨터 전적',s1,b1,c1)
+    elif me == '바위':
+        if com == '보':
+            print('졌습니다')
+            c+=1
+            s1+=1
+            print('나의 전적',s,b,c,'컴퓨터 전적',s1,b1,c1)
+        else:
+            print('이겼습니다')
+            c1+=1
+            s+=1
+            print('나의 전적',s,b,c,'컴퓨터 전적',s1,b1,c1)
+    elif me == '가위':
+        if com == '바위':
+            print('졌습니다')
+            c+=1
+            s1+=1
+            print('나의 전적',s,b,c,'컴퓨터 전적',s1,b1,c1)
+        else:
+            print('이겼습니다')
+            c1+=1
+            s+=1
+            print('나의 전적',s,b,c,'컴퓨터 전적',s1,b1,c1)
+    elif me == '보':
+        if com == '가위':
+            print('졌습니다')
+            c+=1
+            s1+=1
+            print('나의 전적',s,b,c,'컴퓨터 전적',s1,b1,c1)
+        else:
+            print('이겼습니다')
+            c1+=1
+            s+=1
+            print('나의 전적',s,b,c,'컴퓨터 전적',s1,b1,c1)
